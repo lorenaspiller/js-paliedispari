@@ -10,7 +10,7 @@
 // 1. chiedo all'utente di scegliere tra pari e dispari
 do {
   var scelta = prompt("Scegli tra pari o dispari");
-} while ( (scelta != "pari") || (scelta != "dispari") );
+} while ( (scelta != "pari") && (scelta != "dispari") );
 console.log(scelta);
 
 // 2. chiedo all'utente di inserire un numero da 1 a 5
