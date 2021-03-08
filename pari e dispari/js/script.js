@@ -10,12 +10,14 @@
 // 1. chiedo all'utente di scegliere tra pari e dispari
 do {
   var scelta = prompt("Scegli tra pari o dispari");
-} while ( (scelta != "pari") && (scelta != "dispari") );
+} while ( (scelta != "pari") || (scelta != "dispari") );
+console.log(scelta);
 
 // 2. chiedo all'utente di inserire un numero da 1 a 5
 do {
   var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
-} while (isNaN(numeroUtente));
+} while (isNaN(numeroUtente) || (numeroUtente > 5) || (numeroUtente < 1));
+console.log(numeroUtente);
 
 // 3. Genero un numero random da 1 a 5 con una funzione
 function numeroRandom() {
@@ -25,13 +27,14 @@ function numeroRandom() {
 
 // 3. Applico la funzione ad una variabile
 var numeroRandom = numeroRandom();
+console.log(numeroRandom);
 
 // 4. Sommo i due numeri
 var sum = parseInt(numeroUtente) + numeroRandom;
-// console.log(sum);
+console.log(sum);
 
 // 5. Stabilisco se la somma dei due numeri è pari o dispari usando una funzione
-var risultato;
+
 function sommaPariDispari(numero) {
   if (numero % 2 == 0) {
     return "pari";
@@ -42,7 +45,7 @@ function sommaPariDispari(numero) {
 
 // 6. Stabilisco se la somma è pari o dispari applicando la funzione alla somma
 var pariDispari = sommaPariDispari(sum);
-// console.log(pariDispari);
+console.log(pariDispari);
 
 // 7. Dichiaro il vincitore
 if (pariDispari === scelta) {
